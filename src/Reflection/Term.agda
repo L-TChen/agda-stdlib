@@ -32,7 +32,7 @@ open import Relation.Binary.PropositionalEquality
 -- Re-exporting the builtin type and constructors
 
 open import Agda.Builtin.Reflection as Builtin public
-  using (Sort; Type; Term; Clause; Pattern)
+  using (Sort; Type; Term; Clause; Pattern; Telescope)
 open Sort public
 open Term public renaming (agda-sort to sort)
 open Clause public
@@ -43,9 +43,6 @@ open Pattern public
 
 Clauses : Set
 Clauses = List Clause
-
-Telescope : Set
-Telescope = List (String × Arg Type)
 
 -- Pattern synonyms for more compact presentation
 
